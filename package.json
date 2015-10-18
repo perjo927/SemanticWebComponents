@@ -1,0 +1,33 @@
+{
+  "name": "semantic-web-components",
+  "version": "1.0.0",
+  "description": "Semantic Web Components",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "test",
+    "start": "webpack-dev-server --content-base app --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perjo927/SemanticWebComponents.git"
+  },
+  "keywords": [
+    "semantic",
+    "web",
+    "components"
+  ],
+  "author": "Per Jonsson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/perjo927/SemanticWebComponents/issues"
+  },
+  "homepage": "https://github.com/perjo927/SemanticWebComponents#readme",
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "ts-loader": "^0.5.6"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
+  }
+}

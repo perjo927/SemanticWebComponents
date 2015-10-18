@@ -14,13 +14,18 @@ Installation
 ### Requirements
 * [Node.js](https://nodejs.org/en/)
 * [Gulp](http://gulpjs.com/)
-* TODO
+* typescript
+* tsd
+* ts-loader
+* webpack
+* TODO 
 
 > npm install TODO
-
+> tsc
 > gulp TODO
+> npm start
 
-> http-server TODO
+=> Go to localhost:8080/
 
 Demo
 ----
