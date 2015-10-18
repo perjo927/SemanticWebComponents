@@ -29,4 +29,4 @@ Contact
 
 Documentation
 -------------
-Read the **docs** (TODO).
+Read the [**docs**](http://perjo927.github.io/SemanticWebComponents).
