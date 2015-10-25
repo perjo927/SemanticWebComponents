@@ -1,37 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     <title>Semantic Web Components by perjo927</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/perjo927/SemanticWebComponents">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/perjo927/SemanticWebComponents/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/perjo927/SemanticWebComponents/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-        <header>
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
           <h1>Semantic Web Components</h1>
-          <h2>ONE Front-end using Modular CSS &amp; HTML.</h2>
-        </header>
+          <p>ONE Front-end using Modular CSS &amp; HTML.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/perjo927">perjo927</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/perjo927/SemanticWebComponents/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/perjo927/SemanticWebComponents/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/perjo927/SemanticWebComponents" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <h1>
+        <h1>
 <a id="semantic-web-components" class="anchor" href="#semantic-web-components" aria-hidden="true"><span class="octicon octicon-link"></span></a>Semantic Web Components</h1>
 
 <h6>
@@ -44,21 +51,67 @@
 <p>We try to accomplish <strong>ONE</strong> Front-end Using Modular CSS &amp; HTML.
 We do this by showing you our conclusions in <strong>living documentation</strong>.</p>
 
+<p>This app is built on Angular, TypeScript, CSS Modules and Webpack. </p>
+
 <h2>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<blockquote>
-<p>npm install TODO</p>
+<h3>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h3>
 
-<p>gulp TODO</p>
+<ul>
+<li><a href="https://nodejs.org/en/">Node.js</a></li>
+<li><a href="http://webpack.github.io/">Webpack</a></li>
+</ul>
 
-<p>http-server TODO</p>
-</blockquote>
+<h3>
+<a id="get-started" class="anchor" href="#get-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get started</h3>
+
+<ol>
+<li>Install dependencies
+&gt; npm install </li>
+<li>Build 
+
+<ul>
+<li>development mode:
+&gt;<code>npm run dev-build</code>
+</li>
+<li>production mode:
+&gt;<code>npm run dist-build</code>
+</li>
+</ul>
+</li>
+<li>Run!<br>
+&gt; npm start</li>
+<li>Browse
+
+<ul>
+<li>Normal mode
+
+<ul>
+<li><a href="http://localhost:8080/"><strong>localhost:8080/</strong></a></li>
+</ul>
+</li>
+<li>Dev mode
+
+<ul>
+<li>
+<a href="http://localhost:8080/webpack-dev-server/"><strong>localhost:8080/webpack-dev-server/</strong></a> </li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+<h2>
+<a id="develop" class="anchor" href="#develop" aria-hidden="true"><span class="octicon octicon-link"></span></a>Develop</h2>
+
+<p>Get the <em>typescript</em>, <em>tsd</em> and <em>node-sass</em> packages from <strong>npm</strong> in order to compile and handle dependencies.</p>
 
 <h2>
 <a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h2>
 
-<p><a href="http://www.google.com/">Live demo at TODO</a></p>
+<p><a href="http://perjo927.github.io/SemanticWebComponents/">Live demo (TBA)</a></p>
 
 <h2>
 <a id="contact" class="anchor" href="#contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact</h2>
@@ -68,16 +121,11 @@ We do this by showing you our conclusions in <strong>living documentation</stron
 <h2>
 <a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h2>
 
-<p>Read the <strong>docs</strong> (TODO).</p>
-        </section>
+<p>Read the (TBA) <a href="http://perjo927.github.io/SemanticWebComponents"><strong>docs</strong></a>.</p>
+      </section>
 
-        <footer>
-          Semantic Web Components is maintained by <a href="https://github.com/perjo927">perjo927</a><br>
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
     </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
   </body>
 </html>
