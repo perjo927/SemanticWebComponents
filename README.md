@@ -23,7 +23,6 @@ Installation
 ### Get started
 > npm install TODO
 > tsc
-> gulp TODO
 > npm start
 
 => Go to localhost:8080/
