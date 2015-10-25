@@ -5,18 +5,19 @@ const webpack = require('webpack');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 const cleanPlugin = require('clean-webpack-plugin');
+const htmlWebPackPlugin = require('html-webpack-plugin');
 const ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 
 // Webpack configuration object
 let config = {
     context: `${__dirname}/src`, // absolute path which aids in resolving the relative path located in the entry option
     entry: {
-        app: ['webpack/hot/dev-server', './app.ts'] // app.module.ts ?
+        app: ['webpack/hot/dev-server', './core/bootstrap.ts'] // app.ts, app.module.ts ?
     } ,
     // The compiled file will be named and dumped in the dist folder when compiling.
     output: {
-        filename: '[name].bundle.js', //  'bundle-[hash:6].js'
-        path: `${__dirname}/dist`//path.resolve('../dist')
+        filename: 'bundle.js', //  'bundle-[hash:6].js' , [name].bundle.js
+        path: `${__dirname}/dist` //path.resolve('../dist')
     },
      // Turn on source maps
     devtool: 'source-map',
@@ -31,11 +32,16 @@ let config = {
     plugins: [
         new webpack.optimize.UglifyJsPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new cleanPlugin(['dist']),
-        //new HtmlWebpackPlugin({
-        //    filename: 'index.html',
-        //    template: './lib/index.html'
-        //}),
+        //,
+        new cleanPlugin(['dist'])
+        ,
+
+        new htmlWebPackPlugin({
+            filename: 'index.html',
+            template: './src/index.html'
+        })
+
+        // ,
         //new ngAnnotatePlugin({
         //    add: true
         //})
@@ -100,11 +106,11 @@ let config = {
             // Transpiles final stage ES6 to ES5. JSHint requires a .jshintrc at the root directory. Annotates Angular DI
             {
                 test: /\.js?$/, // You now can require any ES6 modules using require('./src/<name>.js');
-                exclude: /node_modules/,
-                loader: 'ng-annotate?add=true!babel?stage=4!jshint'
+                loader: 'ng-annotate?add=true!babel?stage=4!jshint',
+                exclude: /node_modules|bower_components/
             }
         ],
-        postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]// TODO: browserconfig
+        postcss: [ autoprefixer ] // browserslist
     }
 };
 

@@ -7,29 +7,36 @@ Introduction
 We try to accomplish **ONE** Front-end Using Modular CSS & HTML.
 We do this by showing you our conclusions in **living documentation**.
 
+This app is built on Angular, TypeScript, CSS Modules and Webpack. 
 
 Installation
 ------------
 
-### Requirements
+### Requirements (TODO)
 * [Node.js](https://nodejs.org/en/)
-* [Gulp](http://gulpjs.com/)
 * typescript
-* tsd
-* ts-loader
 * webpack
 * TODO 
 
-### Get started
-> npm install TODO
-> tsc
+### Get started (TODO)
+> npm install -g webpack
+> npm install 
+
+* Development Mode:
+    >`npm run dev-build`
+* Production Mode:
+    >`npm run dist-build`
+    
 > npm start
 
-=> Go to localhost:8080/
+=> Go to localhost:8080/ (prod)
+=> Go to localhost:8080/webpack-dev-server/ (dev) 
 
 ### Develop
-> npm run dev-build
-> npm run dist-build
+* typescript
+* tsc
+* tsd
+
 
 Demo
 ----
