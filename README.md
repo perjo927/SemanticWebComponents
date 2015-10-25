@@ -20,12 +20,17 @@ Installation
 * webpack
 * TODO 
 
+### Get started
 > npm install TODO
 > tsc
 > gulp TODO
 > npm start
 
 => Go to localhost:8080/
+
+### Develop
+> npm run dev-build
+> npm run dist-build
 
 Demo
 ----

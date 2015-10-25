@@ -5,7 +5,7 @@
     "sourceMap": true
   },
   "files": [
-    "src/app/app.ts",
+    "src/app.ts",
     "src/typings/tsd.d.ts"
   ]
 }
