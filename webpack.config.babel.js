@@ -110,7 +110,7 @@ let config = {
                 exclude: /node_modules|bower_components/
             }
         ],
-        postcss: [ autoprefixer ] // browserslist
+        postcss: [ autoprefixer ] // list of browsers available in the browserslist config file
     }
 };
 

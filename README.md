@@ -12,41 +12,41 @@ This app is built on Angular, TypeScript, CSS Modules and Webpack.
 Installation
 ------------
 
-### Requirements (TODO)
+### Requirements 
 * [Node.js](https://nodejs.org/en/)
-* typescript
-* webpack
-* TODO 
+* [Webpack](http://webpack.github.io/)
+ 
+### Get started 
+1. Install dependencies
+    > npm install 
+2. Build 
+    * development mode:
+        >`npm run dev-build`
+    * production mode:
+        >`npm run dist-build`
+3. Run!        
+    > npm start
+4. Browse
+    * Normal mode
+        - [**localhost:8080/**](http://localhost:8080/)
+    * Dev mode
+        - [**localhost:8080/webpack-dev-server/**](http://localhost:8080/webpack-dev-server/) 
 
-### Get started (TODO)
-> npm install -g webpack
-> npm install 
-
-* Development Mode:
-    >`npm run dev-build`
-* Production Mode:
-    >`npm run dist-build`
-    
-> npm start
-
-=> Go to localhost:8080/ (prod)
-=> Go to localhost:8080/webpack-dev-server/ (dev) 
-
-### Develop
-* typescript
-* tsc
-* tsd
+Develop
+-------
+Get the *typescript*, *tsd* and *node-sass* packages from **npm** in order to compile and handle dependencies.
 
 
 Demo
 ----
-[Live demo at TODO](http://www.google.com/)
+[Live demo (TBA)](http://perjo927.github.io/SemanticWebComponents/)
 
 
 Contact
 -------
 [Programmer Per](http://www.ProgrammerPer.com)
 
+
 Documentation
 -------------
-Read the [**docs**](http://perjo927.github.io/SemanticWebComponents).
+Read the (TBA) [**docs**](http://perjo927.github.io/SemanticWebComponents).
