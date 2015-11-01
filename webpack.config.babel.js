@@ -43,7 +43,7 @@ let config = {
             template: './src/index.html'
         }),
         new extractTextPlugin('app.css', { allChunks: true }), // Extract the main css file instead of inlining it
-        new ngAnnotatePlugin({ add: true }) // For cleaner angular modules dependency injection
+        new ngAnnotatePlugin({ add: true }) // For angular modules dependency injection, acts on /* @ngInject */ comment.
     ],
     module: {
         // Task Runners for required files of specified type:  require('./src/<name>.<type>')
@@ -70,6 +70,10 @@ let config = {
                 loader: 'file'
                 // loader: 'file?name=fonts/[name].[ext]'
             },
+            //{
+            //    test: /\.(woff|woff2|ttf|eot|svg)(\?]?.*)?$/,
+            //    loader : 'file-loader?name=res/[name].[ext]?[hash]'
+            //}
             //{
             //  test: /\.svg$/,
             //  loader: "url-loader?limit=10000&mimetype=image/svg+xml"
