@@ -15,8 +15,7 @@ let config = {
     // Absolute path which aids in resolving the relative path located in the entry option
     context: __dirname,
     entry: {
-        // Hot reload: Watch and only reload what changed - not everything
-        app: ['webpack/hot/dev-server', './src/core/bootstrap.ts']
+        app: ['webpack/hot/dev-server', './src/core/bootstrap.ts'] // Hot code reload
     } ,
     // The compiled file will be named and dumped in the dist folder when compiling.
     output: {
@@ -36,13 +35,21 @@ let config = {
     // Build hooks
     plugins: [
         new webpack.optimize.UglifyJsPlugin(),
+        // Hot code reload: Watch and only reload code that changed - not everything
         new webpack.HotModuleReplacementPlugin(),
         // Cleans dist every rebuild
         new cleanPlugin(['dist']),
+        // Creates the outputted html file
         new htmlWebPackPlugin({
             filename: 'index.html',
-            template: './src/index.html'
+            template: './src/index.html',
+            title: "Webpack && Angular && TypeScript && CSS Modules",
+            keywords: ["webpack", "angular", "typescript", "css", "css modules"],
+            description: "Angular & TypeScript & CSS Modules with Webpack",
+            author: "Per Jonsson",
+            inject: "body"
         }),
+
         // ExtractTextPlugin moves every require("<name>.css") in entry chunks into a separate css output file.
         // No inlined styles into the javascript, but separate in a css bundle file (<name>.css).
         // It will be faster because the stylesheet bundle is loaded in parallel to the javascript bundle.
