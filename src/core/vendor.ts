@@ -11,4 +11,5 @@ import "../app.scss";
 
 /* Etc */
 
+/* */
 export = { angular } // ES6 Deconstruction assignment
