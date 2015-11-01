@@ -5,7 +5,7 @@
   "main": "dist/bundle.js",
   "scripts": {
     "test": "webpack",
-    "start": "webpack-dev-server --content-base src/ --hot",
+    "start": "webpack-dev-server --colors --progress --content-base src/ --hot",
     "dev-build": "webpack -d --display-modules --display-error-details --progress --colors",
     "dist-build": "webpack -p --display-modules --progress --colors",
     "deploy": "npm run dist-build && gh-pages -d dist -m \"Updates --skip-ci\""

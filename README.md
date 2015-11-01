@@ -44,6 +44,10 @@ in order to compile and handle dependencies.
 
 Specify browsers to target in the _browserslist_ config file using [Browserslist](https://github.com/ai/browserslist).
 
+There is a bug using hot code reload with webpack-dev-server, it doesn't generate index.html from template.html
+when browsing to http://localhost:8080/webpack-dev-server/ . Either place a copy manually in ./src or
+go to http://localhost:8080/public/index.html without live reload.
+
 Demo
 ----
 [Live demo (TBA)](http://perjo927.github.io/SemanticWebComponents/)

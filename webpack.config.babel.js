@@ -20,7 +20,8 @@ let config = {
     // The compiled file will be named and dumped in the dist folder when compiling.
     output: {
         filename: 'bundle.js', //  'bundle-[hash:6].js' , [name].bundle.js
-        path: `${__dirname}/dist`
+        path: `${__dirname}/dist`,
+        publicPath: "/public/"
     },
      // Turn on source maps
     devtool: 'source-map',
@@ -42,13 +43,21 @@ let config = {
         // Creates the outputted html file
         new htmlWebPackPlugin({
             filename: 'index.html',
-            template: './src/index.html',
+            template: './src/template.html',
+            favicon: "./src/favicon.ico", // Adds the given favicon path to the output html,
             title: "Webpack && Angular && TypeScript && CSS Modules",
             keywords: ["webpack", "angular", "typescript", "css", "css modules"],
             description: "Angular & TypeScript & CSS Modules with Webpack",
             author: "Per Jonsson",
             inject: "body"
+            //chunks: Allows you to add only some chunks (e.g. only the unit-test chunk)
+            //excludeChunks: Allows you to skip some chunks (e.g. don't add the unit-test chunk)
         }),
+        // new HtmlWebpackPlugin(), // Generates default index.html
+        //new HtmlWebpackPlugin({  // Also generate a test.html
+        //    filename: 'test.html',
+        //    template: 'src/assets/test.html'
+        //})
 
         // ExtractTextPlugin moves every require("<name>.css") in entry chunks into a separate css output file.
         // No inlined styles into the javascript, but separate in a css bundle file (<name>.css).
