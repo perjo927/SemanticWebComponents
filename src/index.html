@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Style tags will be automatically injected by the style-loader -->
 <head>
     <meta charset="UTF-8">
     <title>Webpack && Angular && TypeScript && CSS Modules</title>
@@ -15,8 +16,26 @@
 </head>
 
 <body>
-    <p>Angular is working: {{1 + 1 === 2}}</p>
+    <header>
+        <nav></nav>
+    </header>
+    <main>
+        <p>Angular is working: {{1 + 1 === 2}}</p>
 
+        <div class="layer">
+            Text #1
+
+            <div class="nested-layer">
+                Text #2
+            </div>
+        </div>
+
+        <div class="box1"> Box1 </div>
+        <div class="box2"> Box2 </div>
+    </main>
+    <aside></aside>
+
+    <footer></footer>
     <script src="bundle.js"></script>
 </body>
 </html>

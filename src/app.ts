@@ -1,5 +1,8 @@
 import greeter = require("./greeter");
 
-console.log(greeter(" World!"));
+function printMessage (status=greeter(" World!")) {
+    console.log(status);
+}
+printMessage();
 
 export = angular.module('app', []);

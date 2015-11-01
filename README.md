@@ -18,14 +18,19 @@ Installation
  
 ### Get started 
 1. Install dependencies
-    > npm install 
+    ```
+    > npm install
+    ```
+
 2. Build 
-    * development mode:
-        >`npm run dev-build`
-    * production mode:
-        >`npm run dist-build`
+    * development mode: `> npm run dev-build`
+    * production mode: `> npm run dist-build`
+
 3. Run!        
+    ```
     > npm start
+    ```
+    
 4. Browse
     * Normal mode
         - [**localhost:8080/**](http://localhost:8080/)
@@ -34,8 +39,10 @@ Installation
 
 Develop
 -------
-Get the *typescript*, *tsd* and *node-sass* packages from **npm** in order to compile and handle dependencies.
+Get the *typescript*, *tsd*, *node-sass* and *webpack-dev-server* packages from **npm**
+in order to compile and handle dependencies.
 
+Specify browsers to target in the _browserslist_ config file using [Browserslist](https://github.com/ai/browserslist).
 
 Demo
 ----

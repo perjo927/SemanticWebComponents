@@ -9,6 +9,8 @@
 // Load all vendor dependencies
 import "./vendor";
 
+
+
 // Load the main app file (src/app.ts)
 import appModule = require('../app');
 
@@ -21,5 +23,3 @@ angular.element(document).ready(function () {
     });
 });
 
-// require(./vendor')(); // run an empty function
-// var appModule = require('../index');
