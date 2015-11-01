@@ -37,13 +37,18 @@ let config = {
     plugins: [
         new webpack.optimize.UglifyJsPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new cleanPlugin(['dist']), // Cleans dist every rebuild
+        // Cleans dist every rebuild
+        new cleanPlugin(['dist']),
         new htmlWebPackPlugin({
             filename: 'index.html',
             template: './src/index.html'
         }),
+        // ExtractTextPlugin moves every require("<name>.css") in entry chunks into a separate css output file.
+        // No inlined styles into the javascript, but separate in a css bundle file (<name>.css).
+        // It will be faster because the stylesheet bundle is loaded in parallel to the javascript bundle.
         new extractTextPlugin('app.css', { allChunks: true }), // Extract the main css file instead of inlining it
-        new ngAnnotatePlugin({ add: true }) // For angular modules dependency injection, acts on /* @ngInject */ comment.
+        // For angular modules dependency injection, acts on /* @ngInject */ comment.
+        new ngAnnotatePlugin({ add: true })
     ],
     module: {
         // Task Runners for required files of specified type:  require('./src/<name>.<type>')
@@ -110,25 +115,17 @@ let config = {
             // require("<name>.scss");  will compile and add the CSS to your page
             {
                 test: /\.scss$/,
-                loader: 'style!css!autoprefixer!sass'
-                //loader: 'style!css!postcss!sass'
+                loader: 'style!css!autoprefixer!sass?sourceMap'
             },
-
-            // Extract-Text moves every require("<name>.css") in entry chunks into a separate css output file.
-            // No inlined styles into the javascript, but separate in a css bundle file (styles.css).
-            // It will be faster because the stylesheet bundle is loaded in parallel to the javascript bundle.
             {
                 test: /\.css$/,
                 loader: extractTextPlugin.extract(
                     'style',
                     'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!autoprefixer'
                 )
-                //    loader: 'style!css!autoprefixer'
-                //    //loader: 'style!css!postcss' // postcss?pack=cleaner"
             }
         ]
-        //postcss: [ autoprefixer({ browsers: ["Android > 1", "IE > 1"] }) ]
-        //postcss: [ autoprefixer ] // list of browsers available in the browserslist config file
+        // TODO: Make postcss work
         //postcss: function () {
         //    return {
         //        defaults: [autoprefixer],

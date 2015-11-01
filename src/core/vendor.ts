@@ -1,3 +1,5 @@
+'use strict';
+
 /* JS */
 // Module load Angular
 // Replaces adding <script src="bower_components/angular/angular.min.js">.
@@ -9,4 +11,4 @@ import "../app.scss";
 
 /* Etc */
 
-export = { angular }; // ES6 Deconstruction assignment
+export = { angular } // ES6 Deconstruction assignment
