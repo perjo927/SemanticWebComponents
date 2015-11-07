@@ -48,6 +48,8 @@ There is a bug using hot code reload with webpack-dev-server, it doesn't generat
 when browsing to http://localhost:8080/webpack-dev-server/ . Either place a copy manually in ./src or
 go to http://localhost:8080/public/index.html without live reload.
 
+<!-- TODO: npm deploy -->
+
 Demo
 ----
 [Live demo (TBA)](http://perjo927.github.io/SemanticWebComponents/)

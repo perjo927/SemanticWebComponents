@@ -6,8 +6,8 @@
 import angular = require("angular");
 
 /* Styles */
-import "../test.css";
 import "../app.scss";
+import "../test.css";
 
 /* Etc */
 

@@ -1,46 +1,39 @@
-<!-- TODO:
-  This file should be automatically generated using hot code reload with webpack-dev-server
-  but is added manually for now for development purposes
--->
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="{%= o.htmlWebpackPlugin.options.keywords %}">
-    <meta name="description" content="{%= o.htmlWebpackPlugin.options.description %}">
-    <meta name="author" content="{%= o.htmlWebpackPlugin.options.author %}">
-    <title>{%= o.htmlWebpackPlugin.options.title %}</title>
+    <meta name="keywords" content="webpack,angular,typescript,css,css modules">
+    <meta name="description" content="Angular &amp; TypeScript &amp; CSS Modules with Webpack">
+    <meta name="author" content="Per Jonsson">
+    <title>Webpack &amp;&amp; Angular &amp;&amp; TypeScript &amp;&amp; CSS Modules</title>
 
     <!-- Style tags will be automatically injected by the style-loader -->
-</head>
+    <link rel="shortcut icon" href="/public/favicon.ico"></head>
 
 <body>
-    <header>
-        <nav>
+<header>
+    <navbar>
 
-        </nav>
-    </header>
-    <main>
-        <p>Is Angular Loaded? {{1 + 1 === 2}}</p>
+    </navbar>
+</header>
+<main>
+    <p>Is Angular Loaded? {{1 + 1 === 2}}</p>
 
-        <div class="layer">
-            Text #1
+    <div class="layer">
+        Text #1
 
-            <div class="nested-layer">
-                Text #2
-            </div>
+        <div class="nested-layer">
+            Text #2
         </div>
+    </div>
 
-        <div class="box1"> Box-text 1 </div>
-        <div class="box2"> Box-text 2 </div>
-    </main>
-    <aside></aside>
+    <div class="box1"> Box-text 1 </div>
+    <div class="box2"> Box-text 2 </div>
+</main>
+<aside></aside>
 
-    <footer></footer>
-    <!-- Bundled script will be injected at the bottom-->
-    <script src="./public/bundle.js"></script>
-
-</body>
+<footer></footer>
+<!-- Bundled script will be injected at the bottom-->
+<script src="/public/bundle.js"></script></body>
 </html>
