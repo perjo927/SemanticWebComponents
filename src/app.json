@@ -5,10 +5,10 @@
     "text": "Webpack",
     "link": "http://webpack.github.io"
   }, {
-    "text": "Require.js",
-    "link": "http://requirejs.org/"
+    "text": "Angular.js",
+    "link": "https://angularjs.org/"
   }, {
-    "text": "Jspm",
-    "link": "http://jspm.io/"
+    "text": "TypeScript",
+    "link": "http://www.typescriptlang.org/"
   }]
 }

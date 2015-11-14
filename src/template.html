@@ -12,28 +12,24 @@
 </head>
 
 <body>
-    <header>
-        <navbar>
+<header ng-cloak>
+    <navbar>
 
-        </navbar>
-    </header>
-    <main>
-        <p>Is Angular Loaded? {{1 + 1 === 2}}</p>
+    </navbar>
+</header>
 
-        <div class="layer">
-            Text #1
+<main>
+    <p>
+        Text 1
+    </p>
+    <span> Text 2</span>
 
-            <div class="nested-layer">
-                Text #2
-            </div>
-        </div>
+    <div class="box1"> Box-text 1 </div>
+    <div class="box2"> Box-text 2 </div>
+</main>
+<aside></aside>
 
-        <div class="box1"> Box-text 1 </div>
-        <div class="box2"> Box-text 2 </div>
-    </main>
-    <aside></aside>
-
-    <footer></footer>
-    <!-- Bundled script will be injected at the bottom-->
+<footer></footer>
+<!-- Bundled script will be injected at the bottom-->
 </body>
 </html>

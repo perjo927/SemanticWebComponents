@@ -1,16 +1,60 @@
 $primaryTextColor: black;
 $secondaryTextColor: grey;
 
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+// http://snook.ca/archives/html_and_css/font-size-with-rem
+html { font-size: 62.5%; } // 1rem = 10px
+
+body {
+  background-color: #eee;
+  color: #333;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+  font-weight: bold;
+}
+h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+h2 {
+  color: #757575;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
 .box2 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
 
-.layer {
-  color: $primaryTextColor;
+main {
+  margin-top: 100px;
 
-  .nested-layer {
+  p {
+    color: $primaryTextColor;
+  }
+  span {
     color: $secondaryTextColor;
+  }
+}
+
+// TODO: Pwaon
+@media (max-width: 999px) {
+  navbar nav {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  aside {
+    display: none;
   }
 }

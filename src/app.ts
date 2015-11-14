@@ -3,8 +3,8 @@
 import greeter = require('./greeter');
 import layout = require('./core/layout');
 
-function printMessage (status=greeter(" World!")) {
-    console.log(status);
+function printMessage (status=greeter(" App!")) {
+    console.info(status);
 }
 printMessage();
 
