@@ -8,7 +8,7 @@ header {
   z-index: 999;
   height: 50px;
   padding: 10px;
-  background-color: #4fc1e9;
+  background-color: $themeColor;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   font-size: 0.9rem;
 
@@ -48,9 +48,9 @@ nav {
       background-image: linear-gradient(
                       to bottom,
                       transparent 76%,
-                      #4fc1e9 82%,
-                      #4fc1e9 83%,
-                      #fff 86%
+                      $themeColor 82%,
+                      $themeColor 83%,
+                      white 86%
       );
       background-size: 100% 116%;
 
@@ -59,16 +59,24 @@ nav {
       &:hover {
         background-size: 100% 100%;
       }
+      &:active {
+        background-size: 100% 85%;
+      }
     }
 
     a {
       text-transform: uppercase;
       text-shadow: 0 4px 2px rgb(79, 193, 233);
+      font-size: 1.1em;
       font-weight: bold;
       transition: all 0.25s ease-in-out;
 
       &:hover {
         text-shadow: 0 0 4px white;
+      }
+
+      &:active {
+        text-shadow: 0 0 0 $themeColor;
       }
     }
   }

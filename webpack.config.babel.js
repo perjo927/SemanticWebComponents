@@ -20,7 +20,7 @@ let config = {
         filename: 'bundle.js',
         path: `${__dirname}/dist/public`
         ,
-        publicPath: `./public` // TODO dist folder doesn't understand relative path to /public ?
+        publicPath: './public'
     },
     // Turn on source maps
     devtool: 'source-map',
