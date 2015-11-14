@@ -1,59 +1,78 @@
-$primaryTextColor: black;
-$secondaryTextColor: grey;
-
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import "variables";
+@import "mixins";
 
-// http://snook.ca/archives/html_and_css/font-size-with-rem
-html { font-size: 62.5%; } // 1rem = 10px
+// https://css-tricks.com/rems-ems/
+html {
+  font-size: $rootFontSize;
+}
 
 body {
-  background-color: #eee;
-  color: #333;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 1.4rem;
+  background-color: $primaryBgColor;
+  color: $primaryTextColor;
+  font-family: $primaryFontFamily;
+  font-size: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
-
+  font-family: $secondaryFontFamily;
   font-weight: bold;
 }
 h1 {
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 2.5em;
 }
+
 h2 {
-  color: #757575;
+  font-size: 1.8em;
+  color: $secondaryTextColor;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 
 .box2 {
+  border: 1px solid black;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
 }
 
 main {
   margin-top: 100px;
 
   p {
-    color: $primaryTextColor;
-  }
-  span {
-    color: $secondaryTextColor;
+    font-size: 1.2em;
   }
 }
 
-// TODO: Pwaon
-@media (max-width: 999px) {
+aside {
+  font-size: 0.8rem;
+}
+
+section {
+  border-radius: 8px;
+  margin: 0 auto 2rem;
+  padding: 1rem 2rem 2rem;
+  width: 80%;
+  font-size: 1rem;
+  background-color: $secondaryBgColor;
+}
+
+
+// MEDIA QUERIES
+@include belowDesktop {
+  html {
+    font-size: $tertiaryFontSize;
+  }
+
   navbar nav {
     display: none;
   }
 }
-@media (min-width: 1000px) {
+
+@include desktop {
+  html {
+    font-size: $secondaryFontSize;
+  }
+
   aside {
     display: none;
   }

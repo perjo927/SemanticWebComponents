@@ -1,0 +1,55 @@
+$smallPhoneWidth: 320px;
+$mediumPhoneWidth: 414px;
+$bigPhoneWidth: 600px;
+$tabletWidth: 768px;
+$desktopWidth: 1000px;
+$megaWidth: 1500px;
+
+@mixin miniPhone {
+  @media (max-width: #{$smallPhoneWidth - 1px}) {
+    @content;
+  }
+}
+
+@mixin smallPhone {
+  @media (min-width: #{$smallPhoneWidth}) and (max-width: #{$mediumPhoneWidth - 1px}) {
+    @content;
+  }
+}
+
+@mixin midRange {
+  @media (min-width: #{$mediumPhoneWidth}) and (max-width: #{$desktopWidth - 24px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tabletWidth}) and (max-width: #{$desktopWidth - 1px}) {
+    @content;
+  }
+}
+
+@mixin belowDesktop {
+  @media (max-width: #{$desktopWidth - 1px}) {
+    @content;
+  }
+}
+
+
+@mixin desktop {
+  @media (min-width: #{$desktopWidth}) {
+    @content;
+  }
+}
+
+@mixin desktopToLarge {
+  @media (min-width: #{$desktop-width})  and (max-width: #{$mega-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$mega-width}) and (max-width: #{$mega-width - 1px}) {
+    @content;
+  }
+}

@@ -1,3 +1,5 @@
+@import "../../variables";
+
 header {
   position: fixed;
   top: 0;
@@ -5,9 +7,10 @@ header {
   right: 0;
   z-index: 999;
   height: 50px;
-  padding: 1rem;
+  padding: 10px;
   background-color: #4fc1e9;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 0.9rem;
 
   h1 {
   }
@@ -15,7 +18,7 @@ header {
   a {
     margin-left: 10px;
     text-decoration: none;
-    text-shadow: 0 0 4px white;
+    text-shadow: 0 0 8px white;
     color: #295E71;
   }
 
@@ -23,9 +26,7 @@ header {
     font-size: 0.5em;
     color: #F4F4F4;
   }
-
 }
-
 
 navbar {
   display: flex;
@@ -41,10 +42,16 @@ nav {
     display: flex;
 
     li {
-      display: block;
-      padding: 6px;
-      border: 6px solid #4fc1e9;
-      background-image: linear-gradient(to bottom,transparent 76%,#4fc1e9 82%,#4fc1e9 83%,#fff 86%);
+      list-style-type: none;
+      padding: 10px;
+      border: 7px solid #4fc1e9;
+      background-image: linear-gradient(
+                      to bottom,
+                      transparent 76%,
+                      #4fc1e9 82%,
+                      #4fc1e9 83%,
+                      #fff 86%
+      );
       background-size: 100% 116%;
 
       transition: all 0.2s ease-in-out;
@@ -67,10 +74,4 @@ nav {
   }
 }
 
-section {
-  background-color: #fff;
-  margin: 0 auto 2rem;
-  padding: 1rem 2rem 2rem;
-  width: 80%;
-}
 
