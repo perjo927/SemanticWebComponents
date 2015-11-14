@@ -30,10 +30,6 @@ h2 {
 }
 
 
-.box2 {
-  border: 1px solid black;
-  display: flex;
-}
 
 main {
   margin-top: 100px;
@@ -51,11 +47,23 @@ section {
   border-radius: 8px;
   margin: 0 auto 2rem;
   padding: 1rem 2rem 2rem;
-  width: 80%;
+  width: 85%;
   font-size: 1rem;
   background-color: $secondaryBgColor;
 }
 
+article {
+  @extend section;
+
+  background-color: rgba($primaryBgColor, 0.33);
+  width: 95%;
+}
+
+
+.box2 {
+  border: 1px solid black;
+  display: flex;
+}
 
 // MEDIA QUERIES
 @include belowDesktop {

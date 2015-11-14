@@ -5,6 +5,7 @@ $tabletWidth: 768px;
 $desktopWidth: 1000px;
 $megaWidth: 1500px;
 
+// MEDIA QUERIES
 @mixin miniPhone {
   @media (max-width: #{$smallPhoneWidth - 1px}) {
     @content;
@@ -53,3 +54,5 @@ $megaWidth: 1500px;
     @content;
   }
 }
+
+// UTILS

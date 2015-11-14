@@ -20,7 +20,7 @@ let config = {
         filename: 'bundle.js',
         path: `${__dirname}/dist/public`
         ,
-        publicPath: "/public/" // TODO dist folder doesn't understand relative path to /public ?
+        publicPath: `./public` // TODO dist folder doesn't understand relative path to /public ?
     },
     // Turn on source maps
     devtool: 'source-map',
@@ -41,7 +41,8 @@ let config = {
         // Cleans dist every rebuild
         new cleanPlugin(['dist']),
         // Creates the outputted html file
-        // TODO: Generate index.html for webpack-dev-server - https://github.com/ampedandwired/html-webpack-plugin/issues/3
+        // TODO: Generate index.html for webpack-dev-server -
+        // https://github.com/ampedandwired/html-webpack-plugin/issues/3
         new htmlWebPackPlugin({
             filename: '../index.html',
             template: './src/template.html',
@@ -51,15 +52,18 @@ let config = {
             description: "Angular & TypeScript & CSS Modules with Webpack",
             author: "Per Jonsson",
             inject: "body"
+
             //chunks: Allows you to add only some chunks (e.g. only the unit-test chunk)
             //excludeChunks: Allows you to skip some chunks (e.g. don't add the unit-test chunk)
         }),
+
         // ExtractTextPlugin moves every require("<name>.css") in entry chunks into a separate css output file.
         // No inlined styles into the javascript, but separate in a css bundle file (<name>.css).
         // Pros: Fewer style tags, sourcemap, CSS requested in parallel+cached separate, faster runtime (less code / DOM operations)
         // Cons: Additional HTTP request, longer compilation time, complex configuration, No runtime public path modification
         //      + No Hot Module Replacement
-        new extractTextPlugin('style.css', { allChunks: true }),
+        new extractTextPlugin('app.css', { allChunks: true }),
+
         // For angular modules dependency injection, acts on /* @ngInject */ comment.
         new ngAnnotatePlugin({ add: true })
     ],
@@ -119,8 +123,10 @@ let config = {
             {
                 test: /\.css$/,
                 loader: 'style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!autoprefixer'
+
                 // TODO: postcss with autoprefixer
-                // * In order to create separate css output file, uncomment below and replace the loader above
+                // * In order to create separate css output file, uncomment below
+                // and replace the loader above (not compatible with hot module replacement)
                 //loader: extractTextPlugin.extract(
                 //    'style',
                 //    'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]&sourceMap!autoprefixer'
