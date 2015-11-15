@@ -1,12 +1,8 @@
 'use strict';
 
-import greeter = require('./greeter');
+// Finding .ts files named by an import x = require(...); declaration
+// The files should be implementation files with top-level import or export declarations
 import layout = require('./core/layout');
-
-function printMessage (status=greeter(" App!")) {
-    console.info(status);
-}
-printMessage();
 
 export = angular.module('app', [
     layout.name

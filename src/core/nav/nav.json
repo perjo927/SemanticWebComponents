@@ -1,0 +1,22 @@
+{
+  "title": "Semantic Web Components",
+  "version": "0.0.2",
+  "links": [
+    {
+      "text": "Webpack",
+      "link": "http://webpack.github.io"
+    },
+    {
+      "text": "Angular.js",
+      "link": "https://angularjs.org/"
+    },
+    {
+      "text": "TypeScript",
+      "link": "http://www.typescriptlang.org/"
+    },
+    {
+      "text": "CSS Modules",
+      "link": "https://github.com/css-modules/css-modules'"
+    }
+  ]
+}

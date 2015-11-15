@@ -1,18 +1,17 @@
-<header class="header" ng-cloak>
-    <!-- Get the app info and put it in the navbar on the left -->
-    <h1 class="main-logo">
-        <a href="/" class="main-logo__link" lx-ripple="white">
-            <span class="main-nav--title">{{::nav.app.title}} </span>
-            <span class="main-nav--version">v{{::nav.app.version}}</span>
-        </a>
-    </h1>
-    <!-- Loop over the links and add them to the navbar on the right -->
-    <nav class="main-nav main-nav--lap-and-up">
-        <ul>
-            <li ng-repeat="n in nav.app.links">
-                <a href="{{::n.link}}" class="main-nav__link" lx-ripple="white">
-                    {{::n.text}}</a>
-            </li>
-        </ul>
-    </nav>
-</header>
+<!-- Get the app info and put it in the navbar on the left -->
+<h1>
+    <a href="/" >
+        <span ng-class="[nav.styles.title]">{{::nav.content.title}} </span>
+        <span ng-class="::nav.styles.version">v{{::nav.content.version}}</span>
+    </a>
+</h1>
+<!-- Loop over the links and add them to the navbar on the right -->
+<nav>
+    <ul>
+        <li ng-repeat="n in nav.content.links">
+            <a href="{{::n.link}}" target="_blank">
+                {{::n.text}}
+            </a>
+        </li>
+    </ul>
+</nav>

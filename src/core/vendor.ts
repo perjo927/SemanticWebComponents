@@ -5,11 +5,8 @@
 // Replaces adding <script src="bower_components/angular/angular.min.js">.
 import angular = require("angular");
 
-/* Styles */
+/* Global Sass styles */
 import "../app.scss";
-import "../test.css";
 
-/* Etc */
-
-/* */
-export = { angular } // ES6 Deconstruction assignment
+/* Exports */
+export = { angular }
