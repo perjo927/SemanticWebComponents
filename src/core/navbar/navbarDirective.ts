@@ -10,9 +10,10 @@
 
 /* Imports */
 const content = require('./navbar.json');
-const html = require('./navbar.html'); // TODO: Make work
-const styles = require('./navbar.css'); // CSS Modules style import
-//import "./nav.scss";  // Sass style import
+const html = require('./navbar.html');
+const styles = require('./nav.scss');
+//const styles = require('./navbar.css');
+//const styles = require('./navbar.out.css'); // for dist purposes
 
 class NavCtrl {
     content: string;

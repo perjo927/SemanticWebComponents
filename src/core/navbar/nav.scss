@@ -1,5 +1,10 @@
 @import "../../variables";
 
+.test {
+  composes: theme from "shared/styles/colors.css"
+}
+
+
 header {
   position: fixed;
   top: 0;

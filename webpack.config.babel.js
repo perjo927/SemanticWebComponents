@@ -59,7 +59,7 @@ let config = {
         // + Fewer style tags, sourcemap, CSS requested in parallel+cached separate, faster runtime (less code / DOM operations)
         // - Additional HTTP request, longer compilation time, complex configuration, No runtime public path modification
         // - No hot module replacement
-        new extractTextPlugin('app.css', { allChunks: true }),
+        new extractTextPlugin('styles.css', { allChunks: true }),
 
         // For angular modules dependency injection, acts on /* @ngInject */ comment.
         new ngAnnotatePlugin({ add: true })
@@ -109,16 +109,17 @@ let config = {
             },
 
             /* Style resources */
-            // require("<name>.scss");  will compile and add the CSS to your page
-            // TODO: postcss with autoprefixer
+            // require("<name>.(s)css");  will compile and add the CSS to your page
+            // The query parameter "modules" enables the CSS Modules spec. (css-loader?modules)
+            // This enables Local scoped CSS by default.
+            // (Switch it off with :global(...) or :global for selectors and/or rules.)
+            // https://github.com/css-modules/css-modules , https://github.com/css-modules/icss
+            // TODO: postcss with autoprefixer + out.scss
             {
                 test: /\.scss$/,
-                loader: 'style!css!sass?sourceMap!autoprefixer'
+                loader: 'style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass!autoprefixer'
 
             },
-            // The query parameter "modules" enables the CSS Modules spec. (css-loader?modules)
-            // This enables Local scoped CSS by default. (Switch it off with :global(...) or :global for selectors and/or rules.)
-            // https://github.com/css-modules/css-modules , https://github.com/css-modules/icss
             {
                 // * Use for separate css output files with source maps *
                 // Note! Not compatible with hot module replacement

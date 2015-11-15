@@ -6,7 +6,6 @@
      All sub-modules are imported here
 */
 
-
 import layout = require('./core/layout');
 
 export = angular.module('app', [
