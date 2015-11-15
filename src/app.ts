@@ -1,7 +1,12 @@
 'use strict';
 
-// Finding .ts files named by an import x = require(...); declaration
-// The files should be implementation files with top-level import or export declarations
+/*
+     app.ts
+     Bootstraps Angular, rather than adding ng-app="app" into the html.
+     All sub-modules are imported here
+*/
+
+
 import layout = require('./core/layout');
 
 export = angular.module('app', [

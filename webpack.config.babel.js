@@ -96,6 +96,7 @@ let config = {
                 test: /\.(png|jpg|gif)$/,
                 loader: "url?limit=5000&name=img/img-[hash:6].[ext]"
             },
+
             /* Script resources */
             {
                 test: /\.ts(x?)$/,
@@ -106,6 +107,7 @@ let config = {
                 loader: 'ng-annotate!babel?stage=4!jshint', //ng-annotate?add=true
                 exclude: /node_modules|bower_components/
             },
+
             /* Style resources */
             // require("<name>.scss");  will compile and add the CSS to your page
             // TODO: postcss with autoprefixer
@@ -116,7 +118,7 @@ let config = {
             },
             // The query parameter "modules" enables the CSS Modules spec. (css-loader?modules)
             // This enables Local scoped CSS by default. (Switch it off with :global(...) or :global for selectors and/or rules.)
-            // https://github.com/css-modules/css-modules
+            // https://github.com/css-modules/css-modules , https://github.com/css-modules/icss
             {
                 // * Use for separate css output files with source maps *
                 // Note! Not compatible with hot module replacement

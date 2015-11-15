@@ -7,11 +7,10 @@
   "files": [
     "src/app.ts",
     "src/lib.d.ts",
-    "src/greeter.ts",
     "src/typings/tsd.d.ts",
     "src/core/bootstrap.ts",
     "src/core/layout.ts",
     "src/core/vendor.ts",
-    "src/core/nav/nav.ts"
+    "src/core/navbar/navbarDirective.ts"
   ]
 }

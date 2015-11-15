@@ -1,19 +1,26 @@
 /// <reference path="../../lib.d.ts" />
+
 'use strict';
 
+/*
+    navbarDirective.ts
+    Simple Navbar directive
+*/
+
+
 /* Imports */
-let content = require('./nav.json');
-let html = require('./nav.html'); // TODO: Make work
-let styles = require('./test.css'); // CSS Modules style import
+const content = require('./navbar.json');
+const html = require('./navbar.html'); // TODO: Make work
+const styles = require('./navbar.css'); // CSS Modules style import
 //import "./nav.scss";  // Sass style import
 
 class NavCtrl {
-    content: any;
-    styles: any;
+    content: string;
+    css: string;
 
     constructor() {
         this.content = content;
-        this.styles = styles;
+        this.css = styles;
     }
 }
 

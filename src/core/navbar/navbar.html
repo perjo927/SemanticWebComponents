@@ -1,0 +1,15 @@
+<h1>
+    <a href="/" >
+        <span ng-class="::nav.css.title">{{::nav.content.title}} </span>
+        <span ng-class="::nav.css.version">v{{::nav.content.version}}</span>
+    </a>
+</h1>
+<nav>
+    <ul>
+        <li ng-repeat="l in nav.content.links">
+            <a href="{{::l.link}}" target="_blank">
+                {{::l.text}}
+            </a>
+        </li>
+    </ul>
+</nav>
