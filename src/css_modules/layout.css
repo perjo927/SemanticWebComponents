@@ -1,0 +1,15 @@
+/*
+    layout.ts
+*/
+
+.flex {
+    display: flex;
+}
+
+.vertical {
+    flex-direction: row;
+}
+
+.centered {
+   justify-content: center;
+}

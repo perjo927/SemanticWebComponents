@@ -7,7 +7,9 @@
 */
 
 import layout = require('./core/layout');
+import uiRouter = require("angular-ui-router");
 
 export = angular.module('app', [
+    uiRouter,
     layout.name
 ]);

@@ -1,0 +1,20 @@
+/*
+  typography.css
+*/
+
+.font-family-1 {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.font-family-2 {
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.font-size-root {
+  font-size: 16px;
+}
+.font-size-lg {
+  font-size: 12px;
+}
+.font-size-md {
+  font-size: 10px;
+}

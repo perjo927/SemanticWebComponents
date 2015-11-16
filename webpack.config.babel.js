@@ -30,7 +30,7 @@ let config = {
             npm: `${__dirname}/node_modules`
         },
         extensions: ['', '.webpack.js', '.web.js', '.ts', '.js'], // Lets you require ("./<name>") for these extensions
-        modulesDirectories: ["node_modules", "components"],
+        modulesDirectories: ["node_modules", "css_modules"],
         root: `${__dirname}/src`
     },
     // Build hooks
@@ -114,7 +114,7 @@ let config = {
             // This enables Local scoped CSS by default.
             // (Switch it off with :global(...) or :global for selectors and/or rules.)
             // https://github.com/css-modules/css-modules , https://github.com/css-modules/icss
-            // TODO: postcss with autoprefixer + out.scss
+            // TODO: out.scss
             {
                 test: /\.scss$/,
                 loader: 'style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass!autoprefixer'
@@ -131,7 +131,6 @@ let config = {
                 )
             },
             // * Use for inline CSS with hot module replacement *
-            // TODO: postcss with autoprefixer
             {
                 test: /^(?!.*out\.css$).*\.css$/, // Match only .css , *not* .out.css
                 loader: 'style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!autoprefixer'

@@ -7,25 +7,26 @@
     Simple Navbar directive
 */
 
-
 /* Imports */
 const content = require('./navbar.json');
 const html = require('./navbar.html');
-const styles = require('./nav.scss');
-//const styles = require('./navbar.css');
-//const styles = require('./navbar.out.css'); // for dist purposes
+const styles = require('./navbar.css');
+//const styles = require('./_navbar.scss'); // TODO
+//const styles = require('./_navbar.out.scss'); // dist (TODO)
 
+
+/* Controller */
 class NavCtrl {
     content: string;
-    css: string;
+    style: string;
 
     constructor() {
         this.content = content;
-        this.css = styles;
+        this.style = styles;
     }
 }
 
-// Directive
+/* Directive */
 export = () => {
     return {
         controller: NavCtrl,

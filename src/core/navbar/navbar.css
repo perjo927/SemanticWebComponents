@@ -1,5 +1,5 @@
-.test {
-    composes: theme from "shared/styles/colors.css"
+.theme {
+    composes: theme from "colors.css"
 }
 
 header {
@@ -22,11 +22,12 @@ header a {
     color: #295E71;
 }
 
-header title {
+.title {
+    margin-left: 10px;
+    composes: theme;
 }
 
-
-header .version {
+.version {
     font-size: 0.5em;
     color: #F4F4F4;
 }

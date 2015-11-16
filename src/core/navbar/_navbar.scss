@@ -1,10 +1,26 @@
 @import "../../variables";
 
-.test {
-  composes: theme from "shared/styles/colors.css"
+// CSS Modules works with SASS too
+// (enable a block as local or global and/or use composition)
+// Isolation + reuse
+// Example:
+:local {
+  .theme {
+    composes: theme from "colors.css";
+  }
+
+  .title {
+    margin-left: 10px;
+    composes: theme;
+  }
+
+  .version {
+    font-size: 0.5em;
+    color: #F4F4F4;
+  }
 }
 
-
+// Regular Sass
 header {
   position: fixed;
   top: 0;
@@ -18,15 +34,9 @@ header {
   font-size: 0.9rem;
 
   a {
-    margin-left: 10px;
     text-decoration: none;
     text-shadow: 0 0 8px white;
     color: #295E71;
-  }
-
-  .version {
-    font-size: 0.5em;
-    color: #F4F4F4;
   }
 }
 
@@ -56,14 +66,13 @@ nav {
       );
       background-size: 100% 116%;
 
-      transition: all 0.2s ease-in-out;
-
       &:hover {
         background-size: 100% 100%;
       }
       &:active {
         background-size: 100% 85%;
       }
+      transition: all 0.2s ease-in-out;
     }
 
     a {
@@ -83,5 +92,6 @@ nav {
     }
   }
 }
+
 
 

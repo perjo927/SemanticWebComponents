@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="{%= o.htmlWebpackPlugin.options.keywords %}">
-    <meta name="description" content="{%= o.htmlWebpackPlugin.options.description %}">
-    <meta name="author" content="{%= o.htmlWebpackPlugin.options.author %}">
-    <title>{%= o.htmlWebpackPlugin.options.title %}</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="{%= o.htmlWebpackPlugin.options.keywords %}">
+        <meta name="description" content="{%= o.htmlWebpackPlugin.options.description %}">
+        <meta name="author" content="{%= o.htmlWebpackPlugin.options.author %}">
+        <title>{%= o.htmlWebpackPlugin.options.title %}</title>
 
-    <!-- Style tags will be automatically injected by the style-loader -->
-</head>
+        <!-- Style tags will be automatically injected by the style-loader -->
+    </head>
 
-<body>
+    <body>
+        <header ng-cloak>
+            <navbar></navbar>
+        </header>
+        <main>
+            <!-- TODO -->
+            <div ui-view></div>
 
-<header ng-cloak>
-    <navbar></navbar>
-</header>
+            <section>
+                <h2> Heading 2 </h2>
+                <p>
+                    Paragraph
+                </p>
+            </section>
 
-<main>
-    <section>
-        <h2> Heading 2 </h2>
-        <p>
-            Paragraph
-        </p>
-    </section>
+            <section>
+                <article>
+                    <div class="box"> Box </div>
+                </article>
+            </section>
+        </main>
 
-    <section>
-        <article>
-            <div class="box1"> Box 1 </div>
-            <div class="box2"> Box 2 </div>
-        </article>
-    </section>
-</main>
+        <aside>
+            <!-- TODO: Off-canvas -->
+        </aside>
 
-<aside>
-    <!-- TODO: Off-canvas -->
-</aside>
-
-<footer></footer>
-<!-- Bundled script will be injected at the bottom-->
-</body>
+        <footer></footer>
+        <!-- Bundled script will be injected at the bottom-->
+    </body>
 </html>

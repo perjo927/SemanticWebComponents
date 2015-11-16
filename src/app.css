@@ -1,0 +1,76 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #eed;
+    color: #333;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #757575;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+main {
+    margin-top: 100px;
+}
+
+main p {
+    font-size: 1.2em;
+}
+
+aside {
+    font-size: 0.8rem;
+}
+
+section, article {
+    border-radius: 8px;
+    margin: 0 auto 2rem;
+    padding: 1rem 2rem 2rem;
+    width: 85%;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+article {
+    background-color: rgba(238, 238, 221, 0.33);
+    width: 95%;
+}
+
+.box {
+    display: flex;
+}
+
+@media (max-width: 999px) {
+    html {
+        font-size: 10px;
+    }
+    navbar nav {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    html {
+        font-size: 12px;
+    }
+    aside {
+        display: none;
+    }
+}

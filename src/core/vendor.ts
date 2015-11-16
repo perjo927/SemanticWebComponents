@@ -10,9 +10,10 @@
 // Replaces adding <script src="bower_components/angular/angular.min.js">.
 import angular = require("angular");
 
-/* Global Sass styles */
-import "../app.scss";
-// TODO: css modules global styles
+/* App-level styles */
+// import "../_app.scss"; /* Global style import */
+//const appStyles =  require("../_app.scss"); // todo
+const appStyles =  require("../app.css");
 
 /* Exports */
 export = { angular }
