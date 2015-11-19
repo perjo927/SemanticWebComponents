@@ -11,6 +11,7 @@
     "src/core/bootstrap.ts",
     "src/core/layout.ts",
     "src/core/vendor.ts",
+    "src/core/states.ts",
     "src/core/navbar/navbarDirective.ts"
   ]
 }

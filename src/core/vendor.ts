@@ -9,6 +9,10 @@
 // Module load Angular
 // Replaces adding <script src="bower_components/angular/angular.min.js">.
 import angular = require("angular");
+//import angularUiRouter = require('angular-ui-router'); // TODO
+//import {uiRouter} from "angular-ui-router"; // TODO
+
+
 
 /* App-level styles */
 // import "../_app.scss"; /* Global style import */
@@ -16,4 +20,4 @@ import angular = require("angular");
 const appStyles =  require("../app.css");
 
 /* Exports */
-export = { angular }
+export = { angular }//, uiRouter }

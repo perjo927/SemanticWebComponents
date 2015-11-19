@@ -1,5 +1,5 @@
 /*
-    lib.t.s
+    lib.d.ts
     Making require style imports available for other resources than .ts with Webpack
 */
 

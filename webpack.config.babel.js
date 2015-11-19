@@ -104,7 +104,7 @@ let config = {
             },
             {
                 test: /\.js?$/,
-                loader: 'ng-annotate!babel?stage=4!jshint', //ng-annotate?add=true
+                loader: 'ng-annotate!babel?stage=4!jshint',
                 exclude: /node_modules|bower_components/
             },
 

@@ -63,3 +63,6 @@ Contact
 Documentation
 -------------
 Read the (TBA) [**docs**](http://perjo927.github.io/SemanticWebComponents).
+
+## Changelog
+v0.0.1
