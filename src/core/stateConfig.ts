@@ -13,7 +13,10 @@ export class StateConfig {
         states.states.forEach(function(state) {
             $stateProvider.state(state.state, state.config);
         });
-        //$locationProvider.html5Mode(true); TODO Error: [$location:nobase] $location in HTML5 mode requires a <base> tag to be
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: false
+        });
         $urlRouterProvider.when('', '/');
         $urlRouterProvider.otherwise("404");
     }

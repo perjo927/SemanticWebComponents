@@ -3,7 +3,7 @@ const state1: string = require("./partials/state1.html"),
     state2: string = require("./partials/state2.html"),
     state2List: string = require("./partials/state2.list.html"),
     state404  = require("./404.html"),
-    stateDefault = require("./partials/default.html");
+    stateDefault = require("./index.html");
 
 
 const states = [
@@ -53,7 +53,7 @@ const states = [
       url: "/list",
       template: state2List,
       controller: function ($scope) {
-        $scope.things = ["A", "Set", "Of", "Things"];
+        $scope.items = ["A", "Set", "Of", "Things"];
       }
     }
   },
