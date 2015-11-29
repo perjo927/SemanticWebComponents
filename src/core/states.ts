@@ -1,9 +1,11 @@
-const state1: string = require("./partials/state1.html"),
-    state1List: string = require("./partials/state1.list.html"),
-    state2: string = require("./partials/state2.html"),
-    state2List: string = require("./partials/state2.list.html"),
+const state1: string = require("./partials/sass.html"),
+    state1List: string = require("./partials/sass.list.html"),
+    state2: string = require("./partials/cssModules.html"),
+    state2List: string = require("./partials/cssModules.list.html"),
     state404  = require("./404.html"),
     stateDefault = require("./index.html");
+
+const links = require("./data/externalLinks.json");
 
 
 const states = [
@@ -36,7 +38,7 @@ const states = [
       url: "/list",
       template: state1List,
       controller: function ($scope) {
-        $scope.items = ["A", "List", "Of", "Items"]; // TODO: Require external links
+        $scope.links = links.links
       }
     },
   },
@@ -53,7 +55,7 @@ const states = [
       url: "/list",
       template: state2List,
       controller: function ($scope) {
-        $scope.items = ["A", "Set", "Of", "Things"]; // TODO: Require external links
+        $scope.links = links.links
       }
     }
   },

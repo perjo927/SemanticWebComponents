@@ -39,7 +39,7 @@ let config = {
         new cleanPlugin(['dist']), // Cleans dist every rebuild
 
         // Creates the outputted html file
-        // TODO: Generate index.html for webpack-dev-server -
+        // TODO: Generate index.html for webpack-dev-server - from template.html instead of using src/index
         // https://github.com/ampedandwired/html-webpack-plugin/issues/3
         new htmlWebPackPlugin({
             filename: '../index.html',

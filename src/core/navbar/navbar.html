@@ -7,7 +7,7 @@
 <nav>
     <ul>
         <li ng-repeat="l in nav.content.links">
-            <a href="{{::l.link}}" target="_blank">
+            <a ui-sref="{{::l.link}}" >
                 {{::l.text}}
             </a>
         </li>
