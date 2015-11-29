@@ -5,7 +5,6 @@ const webpack = require('webpack');
 const cleanPlugin = require('clean-webpack-plugin');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 const htmlWebPackPlugin = require('html-webpack-plugin');
-const ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 const path = require('path'); // can be used for resolve(), combine(), join()
 
 // The main Webpack configuration object
@@ -35,7 +34,7 @@ let config = {
     },
     // Build hooks
     plugins: [
-        new webpack.optimize.UglifyJsPlugin(),
+        //new webpack.optimize.UglifyJsPlugin(), // TODO
         new webpack.HotModuleReplacementPlugin(), //  Watch and only reload code that changed
         new cleanPlugin(['dist']), // Cleans dist every rebuild
 
@@ -59,10 +58,7 @@ let config = {
         // + Fewer style tags, sourcemap, CSS requested in parallel+cached separate, faster runtime (less code / DOM operations)
         // - Additional HTTP request, longer compilation time, complex configuration, No runtime public path modification
         // - No hot module replacement
-        new extractTextPlugin('styles.css', { allChunks: true }),
-
-        // For angular modules dependency injection, acts on /* @ngInject */ comment.
-        new ngAnnotatePlugin({ add: true })
+        new extractTextPlugin('styles.css', { allChunks: true })
     ],
     module: {
         // Task Runners for required files of specified type:  require('./src/<name>.<type>')
@@ -104,7 +100,7 @@ let config = {
             },
             {
                 test: /\.js?$/,
-                loader: 'ng-annotate!babel?stage=4!jshint',
+                loader: 'babel?stage=4!jshint',
                 exclude: /node_modules|bower_components/
             },
 

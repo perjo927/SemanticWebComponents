@@ -12,6 +12,7 @@
     "src/core/layout.ts",
     "src/core/vendor.ts",
     "src/core/states.ts",
+    "src/core/stateConfig.ts",
     "src/core/navbar/navbarDirective.ts"
   ]
 }

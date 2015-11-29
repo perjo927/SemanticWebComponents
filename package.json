@@ -50,8 +50,6 @@
     "jshint": "^2.8.0",
     "jshint-loader": "^0.8.3",
     "json-loader": "^0.5.3",
-    "ng-annotate-loader": "0.0.10",
-    "ng-annotate-webpack-plugin": "^0.1.2",
     "node-sass": "^3.4.2",
     "raw-loader": "^0.5.1",
     "sass-loader": "^3.0.0",
