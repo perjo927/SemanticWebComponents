@@ -1,6 +1,5 @@
 'use strict';
 
-
 export class StateConfig {
 
     constructor(private $stateProvider: ng.ui.IStateProvider,

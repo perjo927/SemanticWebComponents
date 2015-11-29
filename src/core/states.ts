@@ -36,7 +36,7 @@ const states = [
       url: "/list",
       template: state1List,
       controller: function ($scope) {
-        $scope.items = ["A", "List", "Of", "Items"];
+        $scope.items = ["A", "List", "Of", "Items"]; // TODO: Require external links
       }
     },
   },
@@ -53,7 +53,7 @@ const states = [
       url: "/list",
       template: state2List,
       controller: function ($scope) {
-        $scope.items = ["A", "Set", "Of", "Things"];
+        $scope.items = ["A", "Set", "Of", "Things"]; // TODO: Require external links
       }
     }
   },
