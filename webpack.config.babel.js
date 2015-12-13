@@ -34,7 +34,7 @@ let config = {
     },
     // Build hooks
     plugins: [
-        new webpack.optimize.UglifyJsPlugin(),
+        //new webpack.optimize.UglifyJsPlugin(), // TODO
         new webpack.HotModuleReplacementPlugin(), //  Watch and only reload code that changed
         new cleanPlugin(['dist']), // Cleans dist every rebuild
 

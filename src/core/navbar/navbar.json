@@ -1,14 +1,14 @@
 {
   "title": "Semantic Web Components",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "links": [
     {
       "text": "SASS",
-      "link": "state1"
+      "link": "sass"
     },
     {
       "text": "CSS Modules",
-      "link": "state2"
+      "link": "cssModules"
     }
   ]
 }

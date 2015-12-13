@@ -2,8 +2,8 @@
 
     <h3>External Resources</h3>
     <ul>
-        <li ng-repeat="l in links">
-            <a href="{{::l.link}}" target="_blank">
+        <li ng-repeat="l in ctrl.links" ng-class="::ctrl.style.list">
+            <a href="{{::l.link}}" target="_blank" ng-class="::ctrl.style.link">
                 {{::l.text}}
             </a>
         </li>

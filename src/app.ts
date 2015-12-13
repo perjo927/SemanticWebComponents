@@ -3,7 +3,6 @@
 
 /*
  app.ts
- Bootstraps Angular, rather than adding ng-app="app" into the html.
  All sub-modules are imported here
  */
 

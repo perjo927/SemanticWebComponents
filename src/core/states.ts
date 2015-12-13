@@ -1,19 +1,23 @@
-const state1: string = require("./partials/sass.html"),
-    state1List: string = require("./partials/sass.list.html"),
-    state2: string = require("./partials/cssModules.html"),
-    state2List: string = require("./partials/cssModules.list.html"),
-    state404  = require("./404.html"),
-    stateDefault = require("./index.html");
+const links = require("./data/externalLinks.json"); // TODO: separe jsons for each state
+const styles = require('./states.css');
 
-const links = require("./data/externalLinks.json");
+/* Controller */
+class StateCtrl {
+  links: {};
+  style: string;
 
+  constructor() {
+    this.links = links.links;
+    this.style = styles;
+  }
+}
 
 const states = [
   {
     state: 'default',
     config: {
       url: '/',
-      template: stateDefault,
+      template: require("./index.html"),
       title: 'Default'
     }
   },
@@ -21,42 +25,44 @@ const states = [
     state: '404',
     config: {
       url: '/404',
-      template: state404,
+      template: require("./404.html"),
       title: '404'
     }
   },
   {
-    state: 'state1',
+    state: 'sass',
     config: {
-      url: "/state1",
-      template: state1
+      url: "/sass",
+      template: require("./partials/sass.html"),
+      controller: StateCtrl,
+      controllerAs: "ctrl"
     }
   },
   {
-    state: 'state1.list',
+    state: 'sass.resources',
     config: {
-      url: "/list",
-      template: state1List,
-      controller: function ($scope) {
-        $scope.links = links.links
-      }
+      url: "/resources",
+      template: require("./partials/sass.list.html"),
+      controller: StateCtrl,
+      controllerAs: "ctrl"
     },
   },
   {
-    state: 'state2',
+    state: 'cssModules',
     config: {
-      url: "/state2",
-      template: state2
+      url: "/css-modules",
+      template: require("./partials/cssModules.html"),
+      controller: StateCtrl,
+      controllerAs: "ctrl"
     },
   },
   {
-    state: 'state2.list',
+    state: 'cssModules.resources',
     config: {
-      url: "/list",
-      template: state2List,
-      controller: function ($scope) {
-        $scope.links = links.links
-      }
+      url: "/resources",
+      template: require("./partials/cssModules.list.html"),
+      controller: StateCtrl,
+      controllerAs: "ctrl"
     }
   },
 ];

@@ -1,0 +1,16 @@
+.link {
+    font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-decoration: none;
+}
+
+.references {
+    composes: link;
+    margin-left: 5%;
+}
+
+.list {
+    list-style-type: none;
+    margin-left: -5%;
+}
+
+
